@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter, Routes, Route,  } from "react-router-dom";
 
 import {Header} from './components/Header'
 import {Footer} from './components/Footer'
@@ -12,18 +12,18 @@ import {NotFound} from './pages/NotFound'
 function App() {
   return (
     <> 
+      <BrowserRouter>
       <Header />
-      <main className='container content'>
-        <Router>
-          <Switch>
-              <Route exact path='/' component={Home} />
-              <Route path='/about' component={About} />
-              <Route path='/contact' component={Contact} />
-              <Route component={NotFound} />
-          </Switch>
-        </Router>
-      </main>
-      <Footer />
+        <main className='container content'>
+            <Routes>
+              <Route exact path="/" element={<Home />}/>
+              <Route path="/about" element={<About />}/>
+              <Route path="/contacts" element={<Contact />}/>
+              <Route element={<NotFound />} />
+            </Routes>
+        </main>
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }
