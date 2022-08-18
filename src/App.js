@@ -7,6 +7,7 @@ import {Footer} from './components/Footer'
 import {Home} from './pages/Home'
 import {About} from './pages/About'
 import {Contact} from './pages/Contact'  
+import {NotFound} from './pages/NotFound'
 
 function App() {
   return (
@@ -15,9 +16,10 @@ function App() {
       <main className='container content'>
         <Router>
           <Switch>
-              <Route path='/' component={Home} />
+              <Route exact path='/' component={Home} />
               <Route path='/about' component={About} />
               <Route path='/contact' component={Contact} />
+              <Route component={NotFound} />
           </Switch>
         </Router>
       </main>
