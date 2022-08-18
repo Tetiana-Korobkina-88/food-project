@@ -7,6 +7,7 @@ import {Footer} from './components/Footer'
 import {Home} from './pages/Home'
 import {About} from './pages/About'
 import {Contact} from './pages/Contact'  
+import {Movies} from './pages/Movies'
 import {NotFound} from './pages/NotFound'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
               <Route exact path="/" element={<Home />}/>
               <Route path="/about" element={<About />}/>
               <Route path="/contacts" element={<Contact />}/>
+              <Route path="/movies/:title" element={<Movies />}/>
               <Route element={<NotFound />} />
             </Routes>
         </main>
