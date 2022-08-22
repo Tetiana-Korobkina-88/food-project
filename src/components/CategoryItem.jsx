@@ -6,10 +6,10 @@ function CategoryItem(props) {
     <div className="card">
       <div className="card-image">
         <img src={strCategoryThumb} alt={strCategory} />
-        <span className="card-title">Card Title</span>
       </div>
       <div className="card-content">
-        <p>{strCategoryDescription}</p>
+        <span className="card-title">{strCategory}</span>
+        <p>{strCategoryDescription.slice(0, 100)}...</p>
       </div>
       <div className="card-action">
         <Link to={`/category/${idCategory}`} className="btn">
