@@ -20,7 +20,7 @@ function App() {
               <Route exact path="/" element={<Home />}/>
               <Route path="/about" element={<About />}/>
               <Route path="/contacts" element={<Contact />}/>
-              <Route path="/category/:name " element={<Category />}/>
+              <Route path="/category/:name" element={<Category />}/>
               <Route path="*" element={<NotFound />} />
             </Routes>
         </main>
