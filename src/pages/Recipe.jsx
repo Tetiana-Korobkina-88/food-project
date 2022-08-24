@@ -65,7 +65,7 @@ function Recipe() {
         className="btn"
         onClick={() => navigate(-1)}
       >
-        Go back
+        Back to previous page
       </button>
     </>
   );
