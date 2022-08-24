@@ -13,8 +13,6 @@ function Home() {
   const { pathname, search } = useLocation();
 
   const push = useNavigate();
-  // console.log(push);
-  // console.log(pathname, search);
 
   const handleSearch = (str) => {
     setFilteredCatalog(
@@ -28,9 +26,17 @@ function Home() {
   useEffect(() => {
     getAllCategories().then((data) => {
       setCatalog(data.categories);
-      setFilteredCatalog(data.categories);
+      setFilteredCatalog(
+        search
+          ? data.categories.filter((item) =>
+              item.strCategory
+                .toLowerCase()
+                .includes(search.split("=")[1].toLowerCase())
+            )
+          : data.categories
+      );
     });
-  }, []);
+  }, [search]);
 
   return (
     <>
