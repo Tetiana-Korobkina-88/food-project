@@ -14,7 +14,7 @@ import {NotFound} from './pages/NotFound'
 function App() {
   return (
     <> 
-      <BrowserRouter>
+      <BrowserRouter basename='/food-project'>
       <Header />
         <main className='container content'>
             <Routes>
